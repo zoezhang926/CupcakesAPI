@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template, redirect, flash, jsonify
+from flask import Flask, url_for, render_template, redirect, flash, jsonify, request
 from flask_debugtoolbar import DebugToolbarExtension
 from models import db,connect_db,Cupcake,Default_Image
 # from form import AddPetForm,EditPetForm
