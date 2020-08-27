@@ -20,4 +20,15 @@ class Cupcake(db.Model):
     size = db.Column(db.Text,nullable=False)
     rating = db.Column(db.Float,nullable=False)
     image = db.Column(db.Text,nullable=False,default= Default_Image)
+    
+    def to_dict(self):
+        """Serialize cupcake to a dict of cupcake info."""
+
+        return {
+            "id": self.id,
+            "flavor": self.flavor,
+            "rating": self.rating,
+            "size": self.size,
+            "image": self.image,
+        }
 
